@@ -1,0 +1,146 @@
+.index-banner-panel {
+	position: relative
+}
+
+.index-banner-img {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 6.34rem;
+	object-fit: cover
+}
+
+.index-banner-txt {
+	position: absolute;
+	margin-top: -50px;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: .22rem
+}
+
+.index-banner-txt .tit {
+	margin-bottom: .1rem;
+	color: #fff;
+	font-size: .46rem
+}
+
+.index-banner-author {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	color: #fff !important;
+	z-index: 1;
+	font-size: 12px;
+	background-color: rgba(0, 0, 0, .2)
+}
+
+.index-banner-author:hover {
+	background-color: rgba(0, 0, 0, .4);
+	color: #e55e6d !important
+}
+
+.index-product {
+	padding-bottom: 3px
+}
+
+.more-btn {
+	margin: .4rem auto;
+	display: block;
+	padding: 12px 100px;
+	border: 1px solid #e55e6d;
+	border-radius: 3px;
+	color: #e55e6d !important;
+	font-size: 16px;
+	cursor: pointer;
+	max-height: 50px;
+	transition: all .3s;
+	box-sizing: border-box;
+	width: 300px;
+	text-align: center
+}
+
+.more-btn:hover {
+	background-color: #e55e6d;
+	color: #fff !important
+}
+
+.copyright-guide {
+	position: fixed;
+	bottom: -5rem;
+	left: 0;
+	width: 100%;
+	height: 1.04rem;
+	background-color: hsla(0, 0%, 100%, .95);
+	z-index: 2;
+	opacity: 0;
+	transition: all .2s
+}
+
+.copyright-guide.show {
+	bottom: 0;
+	opacity: 1
+}
+
+.copyright-guide-inner {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-ms-flex-align: center;
+	align-items: center
+}
+
+.copyright-guide-inner .icon-shield {
+	margin: -.67rem .5rem 0 0;
+	max-width: 1.42rem
+}
+
+.copyright-guide-inner .text {
+	-ms-flex: 1;
+	flex: 1
+}
+
+.copyright-guide-inner .text .tit {
+	margin-bottom: .1rem;
+	font-size: .28rem;
+	color: #1452eb
+}
+
+.copyright-guide-inner .text .desc {
+	font-size: .18rem;
+	color: #333
+}
+
+.copyright-guide-inner .link {
+	padding: 0 .2rem;
+	display: inline-block;
+	height: .4rem;
+	line-height: .4rem;
+	font-size: .16rem;
+	color: #fff;
+	background: linear-gradient(180deg, rgba(21, 199, 236, .75), rgba(20, 82, 235, .75));
+	border-radius: .06rem
+}
+
+.copyright-guide-inner .link.gray {
+	margin-left: .16rem;
+	background: #e9e9e9;
+	color: #333
+}
+
+.copyright-guide .layui-icon-close {
+	position: fixed;
+	bottom: .68rem;
+	right: .16rem;
+	font-size: 20px;
+	color: #aaa
+}
+
+.copyright-guide .layui-icon-close:hover {
+	color: #333;
+	cursor: pointer
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.coolalbum.mapper.CollectionMapper">
+	<insert id="addCollection" parameterType="com.ssm.coolalbum.pojo.Collection">
+		insert into Collection(photoId,userId,collectionTime)
+		values(#{photoId},#{userId},#{collectionTime})
+	</insert>
+
+	<update id="updateCollection" parameterType="com.ssm.coolalbum.pojo.Collection">
+		update Collection set
+		photoId=#{photoId},userId=#{userId},collectionTime=#{collectionTime}
+		where id=#{id}
+	</update>
+
+	<delete id="deleteCollection" parameterType="int">
+		delete from Collection where userId=#{userId} and photoId=#{photoId}
+	</delete>
+
+    <delete id="deleteCollectionByPhotoId" parameterType="int">
+  	 	delete from Collection where photoId=#{photoId}
+  	 </delete>
+
+
+
+	<delete id="deleteCollectionsByAlbumId" parameterType="int">
+		delete from Collection where photoId in (select photoId from Collection
+		c,Photo p where c.photoId=p.id and p.albumId=#{albumId})
+	</delete>
+
+	<select id="getCollectionsByUserId" parameterType="int"
+		resultMap="collectionsbyUserId">
+		select * from Collection where userId=#{userId}
+	</select>
+	<resultMap type="com.ssm.coolalbum.pojo.Collection" id="collectionsbyUserId">
+		<association property="photo" column="photoId"
+			select="com.ssm.coolalbum.mapper.PhotoMapper.getPhoto"></association>
+	</resultMap>
+
+	<select id="getCollectionByUserId" parameterType="int"
+		resultMap="collectionphoto">
+		select * from Collection where userId=#{userId}
+	</select>
+	<resultMap type="com.ssm.coolalbum.pojo.Collection" id="collectionphoto">
+		<association property="photo" column="photoId"
+			select="com.ssm.coolalbum.mapper.PhotoMapper.getPhoto"></association>
+	</resultMap>
+
+
+
+
+
+
+	<select id="getCollectionByUserIdAndPhotoId" parameterType="int"
+		resultType="com.ssm.coolalbum.pojo.Collection">
+		select * from Collection where userId=#{userId} and photoId=#{photoId}
+	</select>
+</mapper>

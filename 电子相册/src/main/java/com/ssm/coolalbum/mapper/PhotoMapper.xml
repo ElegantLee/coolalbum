@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.coolalbum.mapper.PhotoMapper">
+	<insert id="addPhoto" parameterType="com.ssm.coolalbum.pojo.Photo">
+		insert into Photo(albumId,address,photoName,praisePoint)
+		values(#{albumId},#{address},#{photoName},#{praisePoint})
+	</insert>
+
+	<update id="updatePhoto" parameterType="com.ssm.coolalbum.pojo.Photo">
+		update Photo set
+		albumId=#{albumId},address=#{address},photoName=#{photoName},praisePoint=#{praisePoint}
+		where id=#{id}
+	</update>
+
+	<delete id="deletePhoto" parameterType="int">
+		delete from Photo where id=#{id}
+	</delete>
+
+	<delete id="deletePhotosByAlbumId" parameterType="int">
+		delete from Photo where albumId=#{albumId}
+	</delete>
+
+	<select id="getPhoto" parameterType="int"
+		resultType="com.ssm.coolalbum.pojo.Photo">
+		select * from Photo where id=#{id}
+	</select>
+
+  	 
+	<select id="getPhotosByPhotoName" resultMap="photoByPhotoName"
+		parameterType="String">
+		select * from Photo p,Album a where p.albumId=a.id and a.SecreRank='公开' and
+		p.photoName like #{photoName}
+	</select>
+	<resultMap type="com.ssm.coolalbum.pojo.Photo" id="photoByPhotoName">
+	</resultMap>
+
+	<select id="getPhotosByAlbumName" resultMap="photoByAlbumName"
+		parameterType="String">
+		select * from Photo p,Album a where p.albumId=a.id and a.SecreRank='公开' and
+		a.albumName like #{albumName}
+	</select>
+	<resultMap type="com.ssm.coolalbum.pojo.Photo" id="photoByAlbumName">
+	</resultMap>
+
+	<select id="getPhotosByAlbumTypeAndNum" resultMap="photoByAlbumAndNum">
+		select * from Photo p,Album a where p.albumId=a.id and a.SecreRank='公开' and
+		a.albumType=#{albumType} limit 0,#{num}
+	</select>
+	<resultMap type="com.ssm.coolalbum.pojo.Photo" id="photoByAlbumAndNum">
+	</resultMap>
+
+	<select id="getPhotosByAlbumType" resultMap="photoByAlbum">
+		select * from Photo p,Album a where p.albumId=a.id and a.SecreRank='公开' and
+		a.albumType=#{albumType}
+	</select>
+	<resultMap type="com.ssm.coolalbum.pojo.Photo" id="photoByAlbum">
+	</resultMap>
+	
+	<select id="queryPhotoNumByAlbumId"  parameterType="int"  resultType="int">
+  	 	select count(*) from Photo p where p.albumId=#{albumId}
+  	 </select>
+  	 
+  	 <select id="getPhotosByAlbumId" parameterType="int" resultMap="photoByAlbumId">
+  	 	select * from Photo where albumId=#{albumId}
+  	 </select>
+  	 <resultMap type="com.ssm.coolalbum.pojo.Photo" id="photoByAlbumId">
+  	 </resultMap>
+  	 
+  	 <select id="getPhotoByAlbumId" parameterType="int"
+		resultType="com.ssm.coolalbum.pojo.Photo">
+		select * from Photo where albumId=#{albumId}
+	</select>
+</mapper>

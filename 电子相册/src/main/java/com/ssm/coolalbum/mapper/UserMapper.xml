@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.coolalbum.mapper.UserMapper">
+
+	<insert id="addUser" parameterType="com.ssm.coolalbum.pojo.User"
+		useGeneratedKeys="true" keyProperty="id">
+		insert into
+		User(userName,password,email,sex,birthDate,avar)
+		values(#{userName},#{password},#{email},#{sex},#{birthDate},#{avar})
+	</insert>
+
+	<update id="updateUser" parameterType="com.ssm.coolalbum.pojo.User">
+		update User set
+		userName=#{userName},password=#{password},email=#{email},sex=#{sex},birthDate=#{birthDate},avar=#{avar}
+		where id=#{id}
+	</update>
+
+	<delete id="deleteUser" parameterType="int">
+		delete from User where
+		id=#{id}
+	</delete>
+
+	<select id="getUser" parameterType="int" resultType="com.ssm.coolalbum.pojo.User">
+		select *
+		from User where id=#{id}
+	</select>
+
+	<select id="isExist" parameterType="java.lang.String"
+		resultType="com.ssm.coolalbum.pojo.User">
+		select * from User where username=#{username}
+	</select>
+
+	<select id="getUserByUserNameAndPassword" parameterType="string"
+		resultType="com.ssm.coolalbum.pojo.User">
+		select * from User where userName=#{userName} and
+		password=#{password}
+	</select>
+
+	<select id="getUserIncludeAlbum" parameterType="int" resultMap="useralbum">
+		select * from User where id=#{id}
+	</select>
+	<resultMap type="com.ssm.coolalbum.pojo.User" id="useralbum">
+		<collection property="albums" column="id"
+			select="com.ssm.coolalbum.mapper.AlbumMapper.getAlbumByUserId"></collection>
+	</resultMap>
+
+	<select id="getUserIncludeAttention" parameterType="int"
+		resultMap="userattention">
+		select * from User where id=#{id}
+	</select>
+	<resultMap type="com.ssm.coolalbum.pojo.User" id="userattention">
+		<collection property="attentions" column="id"
+			select="com.ssm.coolalbum.mapper.AttentionMapper.getAttentionByUserId"></collection>
+	</resultMap>
+
+	<select id="getUserIncludeCollection" parameterType="int"
+		resultMap="usercollection">
+		select * from User where id=#{id}
+	</select>
+	<resultMap type="com.ssm.coolalbum.pojo.User" id="usercollection">
+		<collection property="collections" column="id"
+			select="com.ssm.coolalbum.mapper.CollectionMapper.getCollectionByUserId"></collection>
+	</resultMap>
+</mapper>

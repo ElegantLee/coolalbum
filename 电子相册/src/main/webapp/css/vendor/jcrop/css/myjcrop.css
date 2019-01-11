@@ -1,0 +1,97 @@
+/*
+ * @Author: chengyitong 
+ * @Date: 2018-01-16 21:49:32 
+ * @Last Modified by: chengyitong
+ * @Last Modified time: 2018-01-23 11:27:17
+ */
+.canvas-jcrop {
+  padding: 40px;
+  text-align: center;
+}
+
+.canvas-jcrop-preview {
+  position: relative;
+  margin-bottom: 20px;
+  background-color: #fff;
+  height: 400px;
+}
+
+.canvas-jcrop-preview-original {
+  position: relative;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  background: url(../images/bg.png) center repeat;
+}
+.canvas-jcrop-preview-operate {
+  height: 40px;
+  margin: 10px 0;
+}
+.canvas-jcrop-preview-thumb {
+  position: relative;
+  float: left;
+  margin-left: 20px;
+  width: 200px;
+  height: 200px;
+  background: url(../images/bg.png) center repeat;
+}
+.upload-btn {
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+  width: 160px;
+  text-align: center;
+  height: 38px;
+  line-height: 38px;
+  background-color: #009688;
+  color: #fff;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 14px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  overflow: hidden;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.upload-btn-small {
+  padding: 0 18px;
+  height: 30px;
+  line-height: 30px;
+  width: auto;
+}
+.upload-btn-tit {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.file-btn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 160px;
+  height: 38px;
+  line-height: 38px;
+  background-color: #009688;
+  cursor: pointer;
+  /* older safari/Chrome browsers */
+  -webkit-opacity: 0;
+  /* Netscape and Older than Firefox 0.9 */
+  -moz-opacity: 0;
+  /* Safari 1.x (pre WebKit!) è€å¼khtmlå†…æ ¸çš„Safariæµè§ˆå™¨ */
+  -khtml-opacity: 0;
+  /* IE9 + etc...modern browsers */
+  opacity: 0;
+  /* IE 4-9 */
+  filter: alpha(opacity=0);
+  /* This works in IE 8 & 9 too */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  /* IE4-IE9 */
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}

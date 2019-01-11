@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.ssm.coolalbum.mapper.AttentionMapper">
+  	 <insert id="addAttention" parameterType="com.ssm.coolalbum.pojo.Attention">
+  	 	insert into Attention(userId,userId1,attentionTime) values(#{userId},#{userId1},#{attentionTime})
+  	 </insert>
+  	 
+  	 <update id="updateAttention" parameterType="com.ssm.coolalbum.pojo.Attention">
+  	 	update Attention set userId=#{userId},userId1=#{userId1},attentionTime=#{attentionTime} where id=#{id}
+  	 </update>
+  	 
+  	 <delete id="deleteAttention" parameterType="int">
+  	 	delete from Attention where id=#{id}
+  	 </delete>
+  	 
+  	 <select id="getAttentionsByUserId" parameterType="int" resultMap="attentionByUserId">
+  	 	select * from Attention where userId=#{userId}
+  	 </select>
+  	 <resultMap type="com.ssm.coolalbum.pojo.Attention" id="attentionByUserId">
+  	 	<association property="user" column="userId1" select="com.ssm.coolalbum.mapper.UserMapper.getUser"></association>
+  	 </resultMap>
+  	 
+  	 <select id="getAttentionByUserId" parameterType="int" resultMap="userattention">
+  	 	select * from Attention where userId=#{userId}
+  	 </select>
+  	 <resultMap type="com.ssm.coolalbum.pojo.Attention" id="userattention">
+  	 	<association property="user" column="userId1" select="com.ssm.coolalbum.mapper.UserMapper.getUser"></association>
+  	 </resultMap>
+  </mapper>

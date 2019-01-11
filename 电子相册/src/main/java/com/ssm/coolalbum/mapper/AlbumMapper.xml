@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.ssm.coolalbum.mapper.AlbumMapper">
+  	 <insert id="addAlbum" parameterType="com.ssm.coolalbum.pojo.Album" useGeneratedKeys="true" keyProperty="id">
+  	 	insert into Album(userId,albumName,secreRank,albumPassword,albumType) values(#{userId},#{albumName},#{secreRank},#{albumPassword},#{albumType})
+  	 </insert>
+  	 
+  	 <update id="updateAlbum" parameterType="com.ssm.coolalbum.pojo.Album">
+  	 	update Album set userId=#{userId},albumName=#{albumName},secreRank=#{secreRank},albumPassword=#{albumPassword},albumType=#{albumType} where id=#{id}
+  	 </update>
+  	 
+  	 <delete id="deleteAlbum" parameterType="int">
+  	 	delete from Album where id=#{id}
+  	 </delete>
+  	 
+  	 <select id="getAlbumByUserId" parameterType="int" resultType="com.ssm.coolalbum.pojo.Album">
+  	 	select * from Album where userId=#{userId}
+  	 </select>
+  	 
+  	 <select id="getAlbumsByUserId" parameterType="int" resultMap="albumByUserId">
+  	 	select * from Album where userId=#{userId}
+  	 </select>
+  	 <resultMap type="com.ssm.coolalbum.pojo.Album" id="albumByUserId">
+  	 </resultMap>
+  	 
+  	 <select id="getAlbumIncludePhoto" parameterType="int" resultMap="albumphoto">
+  	 	select * from Album where id=#{id}
+  	 </select>
+  	 <resultMap type="com.ssm.coolalbum.pojo.Album" id="albumphoto">
+  	 	<collection property="photos" column="id" select="com.ssm.coolalbum.mapper.PhotoMapper.getPhotoByAlbumId"></collection>
+  	 </resultMap>
+  	 
+  	 <update id="updateAlbumByAlbumID" parameterType="com.ssm.coolalbum.pojo.Album">
+  	 	update Album set albumName=#{albumName} where id=#{id}
+  	 </update>
+  </mapper>

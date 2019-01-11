@@ -1,0 +1,270 @@
+.photographer-list {
+	padding: 20px 0
+}
+
+.photographer-list .photographer-item {
+	position: relative;
+	display: block;
+	background-color: #fff;
+	text-align: center;
+	overflow: hidden;
+	transition: all .3s;
+	color: #666
+}
+
+.photographer-list .photographer-item .default-thumb {
+	padding: 0 16px;
+	background-color: #fff;
+	box-sizing: border-box;
+	width: 100%
+}
+
+.photographer-list .photographer-item-cover {
+	display: block;
+	width: 100%;
+	height: 0;
+	padding-bottom: 41.5%
+}
+
+.photographer-list .photographer-item-bd {
+	position: relative;
+	padding-top: 26px;
+	padding-bottom: 20px
+}
+
+.photographer-list .photographer-item-bd .nickname {
+	margin-top: 13px;
+	font-size: 16px;
+	height: 22px
+}
+
+.photographer-list .photographer-item-bd .statistic {
+	margin: 12px auto 14px;
+	font-size: 12px;
+	color: #666
+}
+
+.photographer-list .photographer-item-avatar {
+	position: relative;
+	margin: 0 auto;
+	display: block;
+	width: 60px;
+	height: 60px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	background: #e1e1e1 url(https://static.tantupix.com/pc/images/icon_avatar.png) 50% no-repeat;
+	background-size: 100% 100%;
+	overflow: hidden
+}
+
+.photographer-list .photographer-item-avatar.inner {
+	margin-top: -1px;
+	margin-left: -1px
+}
+
+.photographer-detail-container {
+	background-color: #fff;
+	min-height: 400px
+}
+
+.photographer-detail-zoneimg {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 6rem;
+	overflow: hidden;
+	object-fit: cover
+}
+
+.photographer-detail-hd {
+	padding-bottom: .4rem;
+	position: relative;
+	border-bottom: 1px solid #e1e1e1;
+	text-align: center
+}
+
+.photographer-detail-hd-content {
+	padding-top: .7rem
+}
+
+.photographer-detail-hd-content p {
+	margin-top: .1rem;
+	color: #666
+}
+
+.photographer-detail-hd-operate {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: .2rem
+}
+
+.photographer-detail-hd-operate ul li {
+	position: relative;
+	float: left;
+	margin-left: 20px
+}
+
+.photographer-detail-hd-operate ul li .operate-item {
+	display: inline-block;
+	line-height: 26px;
+	border: 1px solid #999;
+	border-radius: 3px;
+	width: 60px;
+	text-align: center;
+	font-size: 12px
+}
+
+.photographer-detail-avatar {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 50%;
+	margin-top: -.5rem;
+	margin-left: -.5rem;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 1rem;
+	border: 2px solid #fff;
+	object-fit: cover
+}
+
+.photographer-detail-avatar.inner {
+	margin-top: -.02rem;
+	margin-left: -.52rem
+}
+
+.photographer-detail-bd {
+	padding: 14px 0;
+	min-height: 600px;
+	background-color: #f0f3ef
+}
+
+.photographer-detail-info {
+	padding: 20px;
+	background-color: #fff
+}
+
+.photographer-detail-info ul li {
+	margin: 12px 0;
+	color: #666
+}
+
+.photographer-detail-info ul li .tit {
+	color: #000
+}
+
+.folder-item {
+	position: relative;
+	display: block;
+	background-color: #fff;
+	text-align: center;
+	overflow: hidden;
+	transition: all .3s;
+	color: #666
+}
+
+.folder-item:hover .folder-item-operate {
+	opacity: 1
+}
+
+.folder-item-operate {
+	padding: 0 8px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 40px;
+	background-color: rgba(0, 0, 0, .3);
+	z-index: 1;
+	text-align: right;
+	opacity: 0;
+	transition: all .2s
+}
+
+.folder-item-operate .icon-operate {
+	margin-top: 10px;
+	margin-right: 10px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	cursor: pointer
+}
+
+.folder-item-operate .icon-operate-del {
+	background: url(https://static.tantupix.com/pc/images/icon_del_link_white.png) 50% no-repeat;
+	background-size: 100% 100%
+}
+
+.folder-item-operate .icon-operate-del:hover {
+	background: url(https://static.tantupix.com/pc/images/icon_del_active.png) 50% no-repeat;
+	background-size: 100% 100%
+}
+
+.folder-item-operate .icon-operate-edit {
+	background: url(https://static.tantupix.com/pc/images/icon_edit_white.png) 50% no-repeat;
+	background-size: 18px 18px
+}
+
+.folder-item-operate .icon-operate-edit:hover {
+	background: url(https://static.tantupix.com/pc/images/icon_edit_active.png) 50% no-repeat;
+	background-size: 18px 18px
+}
+
+.folder-item-cover {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 272px;
+	transition: all .3s;
+	object-fit: cover
+}
+
+.folder-item-bd {
+	padding: 20px
+}
+
+.folder-item-bd .count {
+	margin-top: 10px;
+	font-size: 12px
+}
+
+.folder-detail-hd {
+	padding: 12px
+}
+
+@media screen and (max-width:768px) {
+	.photographer-detail-zoneimg {
+		height: 4.6rem
+	}
+
+	.photographer-detail-avatar {
+		margin-top: -.7rem;
+		margin-left: -.7rem;
+		width: 1.4rem;
+		height: 1.4rem
+	}
+
+	.photographer-detail-hd-content {
+		padding-top: 1.1rem
+	}
+
+	.photographer-detail-hd-content .nickname {
+		font-size: .4rem
+	}
+
+	.photographer-detail-hd-content p {
+		font-size: .24rem
+	}
+
+	.photographer-detail-hd-content .follow-btn {
+		padding: .02rem .1rem
+	}
+
+	.operate-item-set-cover,
+	.operate-item-share {
+		display: none
+	}
+}
+
+/*# sourceMappingURL=photographers.css.map */

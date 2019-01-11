@@ -1,0 +1,424 @@
+<style>
+* {
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.layui-rate, li {
+	list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+}
+blockquote, body, button, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, pre, td, textarea, th, ul {
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+	font-size: 14px;
+}
+button, input, optgroup, option, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+	outline: 0;
+}
+article, aside, blockquote, body, button, code, dd, details, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, input, legend, li, menu, nav, ol, p, pre, section, td, textarea, th, ul {
+	margin: 0;
+	padding: 0;
+}
+.t-clear {
+	zoom: 1;
+	*zoom:1: ;
+}
+.login-form-panel {
+	margin: 0 auto;
+	width: 100%;
+	background-color: #fff;
+	border-radius: 4px;
+}
+.login-form-wrap {
+	position: absolute;
+	width: 450px;
+	top: 50%;
+	margin-top: -278px;
+	left: 50%;
+	margin-left: -225px;
+	box-sizing: border-box;
+}
+body {
+	background: url(https://static.tantupix.com/pc/images/bg_login_reg.jpg-topimg) top no-repeat fixed;
+	background-size: cover;
+}
+.login-wrap, body {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+}
+body {
+	line-height: 24px;
+	font: 14px Helvetica Neue,Helvetica,PingFang SC,\5FAE\8F6F\96C5\9ED1,Tahoma,Arial,sans-serif;
+}
+body, html {
+	font: 9.3333333333px Microsoft YaHei,Heiti SC,-apple-system,BlinkMacSystemFont,tahoma,Arial,Helvetica,Verdana,PingFang SC,Hiragino Sans GB,sans-serif;
+	color: #333;
+	background-color: #f0f3ef;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	height: 100%;
+}
+html {
+	font-size: 100px;
+}
+.login-form-panel .login-form-box {
+	padding: 20px 40px;
+}
+.login-form-panel .login-third-party {
+	position: relative;
+	padding: 20px;
+	line-height: 52px;
+	border-top: 1px solid #ddd;
+	color: #666;
+}
+.t-ml5 {
+	margin-left: 20px;
+}
+a {
+	color: #333;
+	text-decoration: none;
+}
+a, ins {
+	text-decoration: none;
+}
+.t-lnk, .t-lnk-gray, .t-lnk-highlight, a {
+	transition: color .2s;
+}
+.t-rose {
+	color: #e55e6d !important;
+}
+.icon-share-wechat {
+	background: #f0f3ef url(https://static.tantupix.com/pc/images/icon_wechat_link.png) 50% no-repeat;
+	background-size: 100% 100%;
+}
+.icon-share-qq {
+	background: #f0f3ef url(https://static.tantupix.com/pc/images/icon_qq_link.png) 50% no-repeat;
+	background-size: 100% 100%;
+}
+.icon-share-weibo {
+	background: #f0f3ef url(https://static.tantupix.com/pc/images/icon_weibo_link.png) 50% no-repeat;
+	background-size: 100% 100%;
+}
+.t-right {
+	float: right !important;
+}
+a, a:active, a:hover, a:link, a:visited {
+	text-decoration: none;
+	color: inherit;
+}
+.t-left, .t-right {
+	display: inline;
+}
+.t-left {
+	float: left !important;
+}
+.login-form-panel .login-tips-txt {
+	color: #666;
+}
+.icon-share {
+	display: inline-block;
+	margin: 8px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.login-form-panel .login-third-party .icon-share {
+	vertical-align: middle;
+	width: 36px;
+	height: 36px;
+}
+.login-form-panel-hd {
+	padding: 0 40px 20px;
+	text-align: center;
+}
+.login-form-panel-tab {
+	margin-bottom: 26px;
+	padding: 6px;
+	background-color: #e5e5e5;
+	border-radius: 4px;
+	overflow: hidden;
+}
+.layui-form-item {
+	margin-bottom: 15px;
+	clear: both;
+	*zoom:1: ;
+}
+.t-mb0 {
+	margin-bottom: 0px;
+}
+.t-mt1 {
+	margin-top: 4px;
+}
+.t-mt5 {
+	margin-top: 20px;
+}
+.login-form-panel .login-form-box .layui-form-item {
+	position: relative;
+}
+button, input, select, textarea {
+	font: 12px/1.5 Microsoft YaHei,Heiti SC,-apple-system,BlinkMacSystemFont,tahoma,Arial,Helvetica,Verdana,PingFang SC,Hiragino Sans GB,sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+.layui-btn, .layui-edge, .layui-inline, img {
+	vertical-align: middle;
+}
+i {
+	font-style: normal;
+}
+.layui-btn, .layui-disabled, .layui-icon, .layui-unselect {
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+}
+input, select, textarea {
+	font-size: 100%;
+}
+.layui-btn, .layui-input, .layui-select, .layui-textarea, .layui-upload-button {
+	outline: 0;
+	-webkit-appearance: none;
+	transition: all .3s;
+	-webkit-transition: all .3s;
+	box-sizing: border-box;
+}
+.layui-btn {
+	display: inline-block;
+	height: 38px;
+	line-height: 38px;
+	padding: 0 18px;
+	background-color: #009688;
+	color: #fff;
+	white-space: nowrap;
+	text-align: center;
+	font-size: 14px;
+	border: none;
+	border-radius: 2px;
+	cursor: pointer;
+}
+.layui-btn-danger {
+	background-color: #ff5722;
+}
+.layui-btn-fluid {
+	width: 100%;
+}
+.login-form-panel .layui-btn-danger {
+	background-color: #e55e6d;
+}
+input[type=checkbox], input[type=checkbox]:focus, input[type=radio], input[type=radio]:focus {
+	display: inline-block;
+	margin: -2px 4px 0;
+	width: 18px;
+	height: 18px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline-style: none;
+	border: 0;
+	vertical-align: middle;
+	cursor: pointer;
+	transition: all .3s;
+}
+input[type=checkbox] {
+	background: url(https://static.tantupix.com/pc/images/icon_checkbox_link.png?v=20180927) 50% no-repeat;
+	background-size: 100% 100%;
+}
+.layui-form input[type=checkbox], .layui-form input[type=radio], .layui-form select {
+	display: none;
+}
+input[type=checkbox]:checked {
+	background: url(https://static.tantupix.com/pc/images/icon_checkbox_active.png?v=20180927) 50% no-repeat;
+	background-size: 100% 100%;
+}
+.layui-form-checkbox, .layui-form-select dl dd.layui-disabled {
+	background-color: #fff;
+}
+.layui-icon {
+	font-family: layui-icon !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.layui-form-checkbox, .layui-form-checkbox *, .layui-form-switch {
+	display: inline-block;
+	vertical-align: middle;
+}
+.layui-form-checkbox {
+	position: relative;
+	height: 30px;
+	line-height: 30px;
+	margin-right: 10px;
+	padding-right: 30px;
+	cursor: pointer;
+	font-size: 0px;
+	-webkit-transition: .1s linear;
+	transition: .1s linear;
+	box-sizing: border-box;
+}
+.layui-form-checked, .layui-form-checked:hover {
+	border-color: #5FB878;
+}
+.layui-form-item .layui-form-checkbox {
+	margin-top: 4px;
+}
+[lay-skin=primary].layui-form-checkbox {
+	height: auto !important;
+	line-height: normal !important;
+	border: none !important;
+	margin-right: 0px;
+	padding-right: 0px;
+	background: 0 0;
+}
+.layui-form-item [lay-skin=primary].layui-form-checkbox {
+	margin-top: 10px;
+}
+.layui-form-checkbox span {
+	padding: 0 10px;
+	height: 100%;
+	font-size: 14px;
+	border-radius: 2px 0 0 2px;
+	background-color: #d2d2d2;
+	color: #fff;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.layui-form-checked span, .layui-form-checked:hover span {
+	background-color: #5fb878;
+}
+[lay-skin=primary].layui-form-checkbox span {
+	float: right;
+	padding-right: 15px;
+	line-height: 18px;
+	background: 0 0;
+	color: #666;
+}
+.layui-form-checkbox i {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 30px;
+	height: 28px;
+	border: 1px solid #d2d2d2;
+	border-left: none;
+	border-radius: 0 2px 2px 0;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+}
+.layui-form-checked i, .layui-form-checked:hover i {
+	color: #5fb878;
+}
+[lay-skin=primary].layui-form-checkbox i {
+	position: relative;
+	top: 0px;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	border: 1px solid #d2d2d2;
+	font-size: 12px;
+	border-radius: 2px;
+	background-color: #fff;
+	-webkit-transition: .1s linear;
+	transition: .1s linear;
+}
+[lay-skin=primary].layui-form-checked i {
+	border-color: #5FB878;
+	background-color: #5fb878;
+	color: #fff;
+}
+[lay-skin=primary].layui-form-checked i {
+	border-color: #e55e6d;
+	background-color: #e55e6d;
+}
+.layui-badge-rim, .layui-colla-content, .layui-colla-item, .layui-collapse, .layui-elem-field, .layui-form-pane [pane].layui-form-item, .layui-form-pane .layui-form-label, .layui-input, .layui-layedit, .layui-layedit-tool, .layui-quote-nm, .layui-select, .layui-tab-bar, .layui-tab-card, .layui-tab-title, .layui-tab-title .layui-this::after, .layui-textarea {
+	border-color: #e6e6e6;
+}
+.layui-input, .layui-select, .layui-textarea {
+	height: 38px;
+	line-height: 1.3;
+	line-height: 38px\9;
+	border-width: 1px;
+	border-style: solid;
+	background-color: #fff;
+	border-radius: 2px;
+}
+.layui-input, .layui-textarea {
+	display: block;
+	width: 100%;
+	padding-left: 10px;
+}
+ol, ul {
+	list-style: none;
+}
+.login-form-panel-tab ul li {
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	width: 50%;
+	text-align: center;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.login-form-panel-tab ul li.active {
+	transition: background-color .5s ease;
+	color: #e55e6d;
+	background-color: #fff;
+}
+.login-form-panel-tab ul li {
+	display: inline-block;
+	width: 100%;
+}
+.login-form-panel .layui-btn-danger:hover{
+		background: gray;
+  border-bottom-left-radius: 15px;
+	-webkit-border-bottom-left-radius: 15px;
+	border-top-left-radius: 15px;
+	-webkit-border-top-left-radius: 15px;
+	-moz-border-bottom-left-radius: 15px;
+	-o-border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	-webkit-border-bottom-right-radius: 15px;
+	border-top-right-radius: 15px;
+	-webkit-border-top-right-radius: 15px;
+	-moz-border-bottom-right-radius: 15px;
+	-o-border-bottom-right-radius: 15px;
+  	transition: 1s all;
+	-webkit-transition: 1s all;
+	-moz-transition: 1s all;
+	-o-transition: 1s all;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: 500;
+	color: #000;
+}
+h2 {
+	font-size: 16px;
+}
+.login-form-panel-hd .tit {
+	margin: 20px auto;
+	font-weight: 400;
+	font-size: 20px;
+	color: #e55e6d;
+}
+</style>

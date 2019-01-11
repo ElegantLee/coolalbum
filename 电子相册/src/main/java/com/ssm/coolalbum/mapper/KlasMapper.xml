@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.ssm.coolalbum.mapper.AlbumMapper">
+  	<resultMap type="com.ssm.coolalbum.pojo.Album" id="klass">
+  		<id column="id" property="id"/>
+  		<result column="name" property="name"/>
+  		<collection property="students" column="id" select="com.day3.mapper.StudentMapper.getStudent"></collection>
+  	</resultMap>
+  	 <select id="findKlasses" parameterType="int" resultMap="klass">
+		select * from klass where id=#{id}  	 	
+  	 </select>
+  	 <insert id="addAlbum" parameterType="com.ssm.coolalbum.pojo.Album">
+  	 	insert into Album(userId,albumName,secreRank,albumPassword,albumType) values(#{userId},#{albumName},#{secreRank},#{albumPassword},#{albumType})
+  	 </insert>
+  	 <update id="updateAlbum" parameterType="com.ssm.coolalbum.pojo.Album">
+  	 	update Album set userId=#{userId},albumName=#{albumName},secreRank=#{secreRank},albumPassword=#{albumPassword},albumType=#{albumType} where id=#{id}
+  	 </update>
+  	 <delete id="deleteAlbum" parameterType="int">
+  	 	delete from Album where id=#{id}
+  	 </delete>
+  	 
+  </mapper>
